@@ -1,113 +1,103 @@
 import Image from "next/image";
 
-const projects = [
-  {
-    name: "My Portfolio Website",
-    description: "Built with Next.js, Tailwind CSS, and deployed on Vercel.",
-    link: "https://github.com/mab262/my-portfolio",
-  },
-  {
-    name: "Open Source Contribution",
-    description: "Contributed bug fixes and features to React ecosystem.",
-    link: "https://github.com/your-other-project",
-  },
-  {
-    name: "Data Visualizer App",
-    description: "An interactive web app to visualize data trends.",
-    link: "https://datavis.example.com",
-  },
-];
-
 export default function Home() {
   return (
-      <main className="min-h-screen max-w-4xl mx-auto p-8 sm:p-16 flex flex-col gap-12 font-[family-name:var(--font-geist-sans)]">
-        {/* Header */}
-        <header className="flex flex-col items-center sm:items-start gap-4">
-          <h1 className="text-5xl font-extrabold tracking-tight">
-            Hi, I'm <span className="text-blue-600">Max Bennett</span>
-          </h1>
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-xl text-center sm:text-left">
-            A passionate Computer Science student & aspiring software engineer,
-            skilled in modern web development, data analysis, and problem-solving.
-          </p>
-        </header>
-
-        {/* Skills */}
-        <section>
-          <h2 className="text-3xl font-semibold mb-6">Skills</h2>
-          <ul className="flex flex-wrap gap-4 text-sm font-mono">
-            {[
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Next.js",
-              "Tailwind CSS",
-              "Python",
-              "Git & GitHub",
-              "SQL",
-            ].map((skill) => (
-                <li
-                    key={skill}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full"
-                >
-                  {skill}
-                </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Projects */}
-        <section>
-          <h2 className="text-3xl font-semibold mb-6">Projects</h2>
-          <div className="grid gap-8 sm:grid-cols-2">
-            {projects.map(({ name, description, link }) => (
-                <a
-                    key={name}
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group p-6 border border-gray-200 dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow duration-300"
-                >
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600">
-                    {name}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">{description}</p>
-                </a>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section className="text-center mt-12">
-          <h2 className="text-3xl font-semibold mb-4">Get In Touch</h2>
-          <p className="mb-6 text-gray-700 dark:text-gray-300">
-            Feel free to reach out to me on{" "}
-            <a
-                href="https://linkedin.com/in/your-linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline"
-            >
-              LinkedIn
-            </a>{" "}
-            or check out my{" "}
-            <a
-                href="https://github.com/mab262"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline"
-            >
-              GitHub
-            </a>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+          <li className="mb-2 tracking-[-.01em]">
+            Get started by editing{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+              src/app/page.tsx
+            </code>
             .
-          </p>
+          </li>
+          <li className="tracking-[-.01em]">
+            Save and see your changes instantly.
+          </li>
+        </ol>
+
+        <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
-              href="mailto:your.email@example.com"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Email Me
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
           </a>
-        </section>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our docs
+          </a>
+        </div>
       </main>
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Learn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
+    </div>
   );
 }
