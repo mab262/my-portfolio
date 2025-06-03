@@ -16,7 +16,7 @@ export default function Home() {
 
           {/* About Me */}
           <section className="text-center sm:text-left">
-            <h1 className="text-3xl font-bold mb-2">Hi, I'm [Your Name]</h1>
+            <h1 className="text-3xl font-bold mb-2">Hi, I&apos;m [Your Name]</h1>
             <p className="text-base text-muted-foreground">
               A passionate Computer Science student building web apps with Next.js, TypeScript, and everything modern.
             </p>
@@ -24,7 +24,7 @@ export default function Home() {
 
           {/* Projects */}
           <section className="w-full">
-            <h2 className="text-xl font-semibold mb-4">Projects</h2>
+          <h2 className="text-xl font-semibold mb-4">Projects</h2>
             <ul className="space-y-4">
               <li className="bg-muted rounded-xl p-4 shadow-sm hover:shadow-md transition">
                 <h3 className="font-medium text-lg">📱 Portfolio Website</h3>
